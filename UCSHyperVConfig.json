@@ -1,0 +1,146 @@
+{
+    "config": {
+        "nodeconfig": {
+            "HELP-NODECONFIG": "MANDATORY name, uscuser, uscuserpw, ucsip, ucsorg, ucsprofdestorg, ucsServiecProfile, hwtype (ucsBladId and ucsSlotId) or (ucsRackMountSvrId), bmcrunas, bmcprotocol, bmcport, vmmphyprofilename",
+            "name": "SERVERNAME",
+            "fqdnname": "SERVERNAME.cloudlab.local",
+            "domain": "\\cloudlab",
+            "uscuser": "UCSUSERNAME",
+            "uscuserpw": "P@ssw0rd1",
+            "ucsip": "10.10.10.10",
+            "ucsroot": "root",
+            "ucsorg": "UCSORG",
+            "HELP-NODECONFIG2": "UCS org and profile settings here",
+            "ucsorgroot": "org-root",
+            "ucsorg2": "org-MS-Azure-Lab",
+            "ucsorgfullpath": "org-root/org-MS-Azure-Lab",
+            "ucsprofdestorg": "root/org-MS-Azure-Lab",
+            "ucsServiecProfile": "MS-WIN-CL-MGMT1-NodeAutomation",
+            "HELP-NODECONFIG3": "!!!!!SET hwtype TO blade OR rack!!!!!",
+            "hwtype": "blade",
+            "ucsBladeId": "2",
+            "ucsSlotId": "8",
+            "ucsRackMountSvrId": "",
+            "bmcrunas": "ipmiuser",
+            "bmcrunasid": "46d7ab88-9c57-40c2-a1be-d9e8b81b028",
+            "bmcprotocol": "IPMI",
+            "bmcport": "623",
+            "bmcip": "",
+            "bmcsmbiosguid": "",
+            "vmmserver": "SERVERNAMEVMM",
+            "vmmphyprofilename": "HyperVUCSProfile",
+            "vmmhostgrp": "Lab IaaS",
+            "vmmhostgrpid": "ef0b59d2-4381-4339-99e5-6de1fe28884",
+            "fnmgntlogicalname": "LAB-100-Frontnet",
+            "fnmgntlogicalid":"5b238891-9f53-4d8e-a7d7-8e3e0d7c696",
+            "eventlogsvr": "SERVERNAME.cloudlab.local",
+            "hvvhdpath": "C:\\ClusterStorage\\CSV01",
+            "hvvmpath": "C:\\ClusterStorage\\CSV01",
+            "hvmaxvmmigrations": "40",
+            "hvmaxstormigrations": "2",
+            "HELP-NODECONFIG4": ""
+        },
+        "renamenics": {
+            "HELP-RENAMENICS": "MANDATORY for hyper-v deployments. Will rename all NICS from UCS NIC names(vnic).",
+            "nicPAname": "Primary A",
+            "nicPBname": "Primary B",
+            "nicFNAname": "Frontnet A",
+            "nicFNBname": "Frontnet B",
+            "nicBNAname": "Backnet A",
+            "nicBNBname": "Backnet B",
+            "nicLMAname": "Live Migration A",
+            "nicLMBname": "Live Migration B"
+        },
+        "newhvsw": {
+            "HELP-NEWHVSW": "MANDATORY ALL for hyper-v deployments. New Hyper-V switch deployments.",
+            "swchFNname": "Frontnet",
+            "swchBNname": "Backnet"
+        },
+        "cluster": {
+            "HELP-CLUSTER": "HYPER-V CLUSTER. Currently not used for future deployments of new clusters.",
+            "clustername": "HYPERVCLUSTERNAME",
+            "dsk1": "",
+            "dsk2": "",
+            "dsk3": "",
+            "dsk4": "",
+            "dsk5": "",
+            "dsk6": ""
+        },
+        "setNicIp": {
+            "HELP-SETNICIP": "MANDATORY FOR ALL NICS THAT NEED AN IP. Do not set mask to 255.255.255.0 it needs to be in bit format ie 24. pria subnet field is for vmm static ip." ,
+            "pria": {
+                "name": "Primary A",
+                "ipv4": "10.10.10.10",
+                "mask": "21",
+                "gateway": "10.10.10.1",
+                "dns1": "10.10.10.2",
+                "dns2": "10.10.10.3",
+                "macaddr": "00-25-B5-11-1A-2B",
+                "subnet": "10.10.0.0/21"
+            },
+            "prib": {
+                "name": "Primary B",
+                "ipv4": "172.10.10.10",
+                "mask": "24",
+                "gateway": "",
+                "dns1": "",
+                "dns2": "",
+                "macaddr": "00:00:00:00:00"
+            },
+            "livea": {
+                "name": "Live Migration A",
+                "ipv4": "172.11.10.10",
+                "mask": "24",
+                "gateway": "",
+                "dns1": "",
+                "dns2": "",
+                "macaddr": "00:00:00:00:00"
+            },
+            "liveb": {
+                "name": "Live Migration B",
+                "ipv4": "172.11.10.10",
+                "mask": "24",
+                "gateway": "",
+                "dns1": "",
+                "dns2": "",
+                "macaddr": "00:00:00:00:00"
+            },
+            "fneta": {
+                "name": "Frontnet A",
+                "ipv4": "",
+                "mask": "",
+                "gateway": "",
+                "dns1": "",
+                "dns2": "",
+                "macaddr": "00:00:00:00:00"
+            },
+            "fnetb": {
+                "name": "Frontnet B",
+                "ipv4": "172.16.0.210",
+                "mask": "24",
+                "gateway": "",
+                "dns1": "",
+                "dns2": "",
+                "macaddr": "00:00:00:00:00"
+            },
+            "bneta": {
+                "name": "Backnet A",
+                "ipv4": "10.245.100.10",
+                "mask": "",
+                "gateway": "",
+                "dns1": "",
+                "dns2": "",
+                "macaddr": "00:00:00:00:00"
+            },
+            "bnetb": {
+                "name": "Backnet B",
+                "ipv4": "",
+                "mask": "",
+                "gateway": "",
+                "dns1": "",
+                "dns2": "",
+                "macaddr": "00:00:00:00:00"
+            }
+        }
+    }
+}
