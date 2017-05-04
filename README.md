@@ -1,6 +1,6 @@
 # BMaaS
 Bare Metal as a Service (BMaaS)
-Deploy a Cisco UCS Blades or Rackmount servers to an existing Hyper-V cluster.
+Deploy a Cisco UCS Blades or Rackmount servers to an existing Hyper-V cluster. JSON file is used for all var input.
 What you need:
 Hyper-V
 VMM server
